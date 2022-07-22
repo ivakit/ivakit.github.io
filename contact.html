@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="spanish">
+  <meta name="copyriht" content="IvaKit">
+  <meta name="author" content="Iván López">
+  <meta name="audience" content="all">
+  <meta name="description" content="Mi nombre es Iván soy desarrollador web especializado en el área del frontend">
+  <meta name="keywords" content="ivakit desarrollo-web web-development">
+  <meta name="robots" content="index, all, follow">
+  <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon" />
+  <title>Contacto - Ivakit | Blog sobre Desarrollo web</title>
+  <!-- Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- styles -->
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+  <a href="/" title="Inicio" class="arrow__left">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+  <main class="main">
+    <div class="contact__more">
+      <h2 class="contact__more__title">Contáctame en mis redes sociales</h2>
+      <div class="more__container">
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+          <a class="button__link" href="https://facebook.com/profile.php?id=100064297605803" target="_blank"
+            rel="noopener">Facebook</a>
+        </div>
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+          <a class="button__link" href="https://www.instagram.com/ivakit_" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <a class="button__link" href="https://wa.me/529631992376" target="_blank" rel="noopener">Whatsapp</a>
+        </div>
+        <div class="button">
+          <div class="icon"><i class="fa-brands fa-telegram"></i></div>
+          <a class="button__link" href="https://t.me/ivakit" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </div>
+      <img class="contact__more__img" src="assets/img/email-send.gif" alt="Mobile-svg">
+    </div>
+    <form action="https://formsubmit.co/ivancontacto65@gmail.com" method="POST" class="form">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="form__group" id="group-user">
+        <label for="user" class="form__label">Nombre</label>
+        <div class="form__group-input">
+          <input type="text" name="name" id="user" class="form__input">
+          <i class="form__icon fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="form__error__message">El nombre solo admite letras y espacios</p>
+      </div>
+
+      <div class="form__group" id="group-email">
+        <label for="mail" class="form__label">Correo electrónico</label>
+        <div class="form__group-input">
+          <input type="email" name="email" id="mail" class="form__input">
+          <i class="form__icon fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="form__error__message">Por favor ingresa un correo válido</p>
+      </div>
+
+      <div class="form__group">
+        <label for="affair" class="form__label">Asunto</label>
+        <div class="form__group-input">
+          <input type="text" name="subject" id="affair" class="form__input">
+        </div>
+      </div>
+
+      <div class="form__group" id="group-message">
+        <label for="sms" class="form__label">Mensaje</label>
+        <div class="form__group-input">
+          <textarea name="message" id="sms" class="form__input form__input-message"></textarea>
+          <i class="form__icon form__icon-sms fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="form__error__message">Tu mensaje no debe superar los 200 caracteres y no debe estar vacío</p>
+      </div>
+
+      <div class="form__message">
+        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor llene el formulario correctamente
+        </p>
+      </div>
+
+      <div class="form__group form__group-btn-submit">
+        <button type="submit" class="form__btn">Enviar</button>
+      </div>
+    </form>
+  </main>
+  <script src="script/form.js"></script>
+</body>
+
+</html>
