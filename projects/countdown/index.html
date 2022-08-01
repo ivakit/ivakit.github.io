@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IvaKit | CountDown</title>
+  <link rel="shortcut icon" href="/assets/icons/favicon.png" sizes="32x32" type="image/x-icon">
+  <link rel="stylesheet" href="src/css/main.css">
+</head>
+
+<body>
+  <div class="final-message">
+    <h2>Tiempo finalizado</h2>
+    <img src="src/img/timeup.svg" alt="TimeUp SVG-File" class="timeup-img">
+    <button id="alert" class="btn">OK</button>
+  </div>
+  <div class="container">
+    <div class="countdown-container">
+      <h2 class="countdown-title">Quedan:</h2>
+      <div class="countdown-date">
+        <div class="box">
+          <p id="days"></p>
+          <p class="box-description">DIAS</p>
+        </div>
+        <div class="box">
+          <p id="hours"></p>
+          <p class="box-description">HORAS</p>
+        </div>
+        <div class="box">
+          <p id="minutes"></p>
+          <p class="box-description">MINUTOS</p>
+        </div>
+        <div class="box">
+          <p id="seconds"></p>
+          <p class="box-description">SEGUNDOS</p>
+        </div>
+      </div>
+      <h2 class="countdown-title">Para el 01 de enero del 2023</h2>
+    </div>
+    <div class="wave wave-invert" style="height: 150px; overflow: hidden;">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M-1.60,33.16 C163.18,249.24 441.39,-48.72 505.73,25.26 L500.00,149.98 L0.01,149.98 Z"
+          style="stroke: none; fill: #d72525fa;"></path>
+      </svg>
+    </div>
+    <div class="wave" style="height: 150px; overflow: hidden;">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M-1.60,33.16 C163.18,249.24 441.39,-48.72 505.73,25.26 L500.00,149.98 L0.01,149.98 Z"
+          style="stroke: none; fill: #d72525e4;"></path>
+      </svg>
+    </div>
+  </div>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>

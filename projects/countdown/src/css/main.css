@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Outfit:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.final-message {
+  position: absolute;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px 4px #eae6e6;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease;
+}
+
+.final-message h2 {
+  color: #25252b;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .final-message {
+    width: 80%;
+  }
+}
+
+.timeup-img {
+  width: 100%;
+  height: 180px;
+}
+
+.btn {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  background-color: #25252b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 4px 2px #c1bebe;
+}
+
+.final-message.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.wave-invert {
+  transform: scaleX(-1);
+  height: 190px;
+}
+
+.countdown-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.countdown-title {
+  font-size: 2rem;
+  color: #25252b;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0 10px;
+}
+
+.countdown-date {
+  display: flex;
+  width: inherit;
+  height: auto;
+  justify-content: center;
+  max-width: 600px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.box p {
+  font-size: 2.5rem;
+}
+
+.box .box-description {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
