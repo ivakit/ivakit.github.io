@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IvaKit | Calculator</title>
+  <link rel="shortcut icon" href="/assets/icons/icon.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <article class="calculator">
+    <div class="calculator-date" id="calc-date">O</div>
+    <div class="calculator-btn">
+      <input type="button" class="btn clear-all" value="CE" />
+      <button type="button" class="btn clear">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+        </svg>
+      </button>
+      <input type="button" class="btn date" value="*" />
+      <input type="button" class="btn date" value="/" />
+
+      <input type="button" class="btn date" value="7" />
+      <input type="button" class="btn date" value="8" />
+      <input type="button" class="btn date" value="9" />
+      <input type="button" class="btn date" value="-" />
+
+      <input type="button" class="btn date" value="4" />
+      <input type="button" class="btn date" value="5" />
+      <input type="button" class="btn date" value="6" />
+      <input type="button" class="btn date" value="+" />
+
+      <input type="button" class="btn date" value="3" />
+      <input type="button" class="btn date" value="2" />
+      <input type="button" class="btn date" value="1" />
+      <input type="button" class="btn equal" value="=" />
+
+      <input type="button" class="btn date" value="0" />
+      <input type="button" class="btn date" value="." />
+    </div>
+  </article>
+  <script src="script.js"></script>
+</body>
+
+</html>

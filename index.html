@@ -12,9 +12,12 @@
   <meta name="description" content="Mi nombre es Iván soy desarrollador web especializado en el área del frontend">
   <meta name="keywords" content="ivakit desarrollo-web web-development">
   <meta name="robots" content="index, all, follow">
-  <link rel="shortcut icon" href="assets/icons/favicon.png" sizes="32x32" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/icons/icon.svg" sizes="32x32" type="image/x-icon" />
   <title>Ivakit | Blog sobre Desarrollo web</title>
   <!-- Libraries -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,10 +29,7 @@
   <link rel="stylesheet" href="css/index.css" />
 </head>
 
-<body class="overflow">
-  <div class="pre-loader" id="loader">
-    <img src="assets/icons/load-bg.png" alt="Loader" class="loader__circle">
-  </div>
+<body class="overflow" id="home">
   <div class="wrapper">
     <!-- Menu btn -->
     <button class="menu-btn hamburger hamburger--spring" type="button">
@@ -38,9 +38,12 @@
       </span>
     </button>
     <!--  -->
-    <header class="hero" id="home">
+    <header class="header">
       <div class="logo">
-        <img src="assets/icons/logo-dark.png" alt="This-is-a-logo" class="logo__img" />
+        <a href="index.html#home">
+          <img src="assets/icons/icon.svg" alt="Logotipo" class="logo__img" />
+        </a>
+        <h2>Ivakit</h2>
       </div>
       <div class="menu">
         <nav class="nav">
@@ -50,11 +53,8 @@
         </nav>
       </div>
     </header>
-    <main id="home" class="main">
+    <main class="main">
       <section class="section__info">
-        <div class="info__img__container">
-          <img class="info__img" src="assets/img/port.png" alt="Man-developer-info-section" />
-        </div>
         <div class="info__description">
           <h1 class="info__title">Soy <span>Iván</span> López</h1>
           <p>
@@ -63,11 +63,13 @@
           </p>
           <a download="#" href="#"><button class="hero__link">Descargar CV</button></a>
         </div>
+        <div class="info__img__container">
+          <img class="info__img" src="assets/img/dev-hero-ilustration.svg" alt="Man-developer-info-section" />
+        </div>
       </section>
       <section class="about__me">
-        <img src="assets/img/about.png" alt="Man-developer-about-section" class="about__img" />
         <div class="about__paragraph">
-          <h2 class="subtitle about__title"><span>Acerca</span> de mi</h2>
+          <h2 class="subtitle about__title"><span class="title-decoration">Acerca</span> de mi</h2>
           <p class="about__text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
             exercitationem earum mollitia ipsam et quam id labore quia quos
@@ -78,9 +80,10 @@
             exercitationem earum mollitia
           </p>
         </div>
+        <img src="assets/img/certificate.svg" alt="Man-developer-about-section" class="about__img" />
       </section>
       <section class="projects" id="projects">
-        <h2 class="project__title"><span>Mis</span> Proyectos</h2>
+        <h2 class="project__title"><span class="title-decoration">Mis</span> Proyectos</h2>
         <div class="cards">
           <div class="card">
             <div class="card__hover__info">
@@ -135,17 +138,18 @@
                 <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
               </div>
             </div>
-            <img src="https://placeimg.com/200/200/people" alt="Project card picture" class="card__img" />
+            <img src="assets/img/calculator.png" alt="Project card picture" class="card__img" />
             <div class="card__paragraph">
-              <h3 class="card__title">TITULO DEL PROYECTO</h3>
-              <p class="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem eius soluta
-                facilis corporis,</p>
+              <h3 class="card__title">CALCULADORA CLÁSICA</h3>
+              <p class="card__description">Una calculadora clásica funcional maquetada con HTML5, CSS3 y programada con
+                vanilla Javascript</p>
             </div>
             <div class="card__icons">
-              <a href="404.html" class="card_link" title="Github" target="_blank" rel="noopener">
+              <a href="https://github.com/ivakit/ivakit.github.io/tree/main/projects/calculator" class="card_link"
+                title="Github" target="_blank" rel="noopener">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="404.html" class="card_link" title="Preview" target="_blank" rel="noopener">
+              <a href="projects/calculator/" class="card_link" title="Preview" target="_blank" rel="noopener">
                 <i class="fa-solid fa-globe"></i>
               </a>
               <a href="contact.html" class="card_link"><i class="fa-solid fa-envelope"></i></a>
@@ -159,7 +163,31 @@
                 <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
               </div>
             </div>
-            <img src="https://placeimg.com/200/200/nature" alt="Project card picture" class="card__img" />
+            <img src="https://placeimg.com/200/200/tech" alt="Project card picture" class="card__img" />
+            <div class="card__paragraph">
+              <h3 class="card__title">TITULO DEL PROYECTO</h3>
+              <p class="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem eius soluta
+                facilis corporis,</p>
+            </div>
+            <div class="card__icons">
+              <a href="404.html" class="card_link" title="Github" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="404.html" class="card_link" title="Preview" target="_blank" rel="noopener">
+                <i class="fa-solid fa-globe"></i>
+              </a>
+              <a href="contact.html" class="card_link" title="Comment"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__hover__info">
+              <div>
+                <p>You can see the project at the Github repository, see a preview and leave a
+                  comment</p>
+                <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
+              </div>
+            </div>
+            <img src="https://placeimg.com/200/200/arch" alt="Project card picture" class="card__img" />
             <div class="card__paragraph">
               <h3 class="card__title">TITULO DEL PROYECTO</h3>
               <p class="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem eius soluta
