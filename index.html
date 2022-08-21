@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="css/index.css" />
 </head>
 
-<body class="overflow" id="home">
+<body id="home">
   <div class="wrapper">
     <!-- Menu btn -->
     <button class="menu-btn hamburger hamburger--spring" type="button">
@@ -41,7 +41,89 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <!--  -->
+    <!-- Modal for form  -->
+    <article class="modal" id="modal">
+      <button class="modal-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+        </svg>
+      </button>
+      <article class="modal-content">
+        <div class="contact__more">
+          <h2 class="contact__more__title">Contáctame en mis redes sociales</h2>
+          <div class="more__container">
+            <div class="modal-button">
+              <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+              <a class="modal-button__link" href="https://facebook.com/profile.php?id=100064297605803" target="_blank"
+                rel="noopener">Facebook</a>
+            </div>
+            <div class="modal-button">
+              <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+              <a class="modal-button__link" href="https://www.instagram.com/ivakit_" target="_blank"
+                rel="noopener">Instagram</a>
+            </div>
+            <div class="modal-button">
+              <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <a class="modal-button__link" href="https://wa.me/529631992376" target="_blank"
+                rel="noopener">Whatsapp</a>
+            </div>
+            <div class="modal-button">
+              <div class="icon"><i class="fa-brands fa-telegram"></i></div>
+              <a class="modal-button__link" href="https://t.me/ivakit" target="_blank" rel="noopener">Telegram</a>
+            </div>
+          </div>
+          <img class="contact__more__img" src="assets/img/email-send.gif" alt="Mobile-svg">
+        </div>
+        <form action="https://formsubmit.co/ivancontacto65@gmail.com" method="POST" class="form">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form__group" id="group-user">
+            <label for="user" class="form__label">Nombre</label>
+            <div class="form__group-input">
+              <input type="text" name="name" id="user" class="form__input">
+              <i class="form__icon fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="form__error__message">El nombre solo admite letras y espacios</p>
+          </div>
+
+          <div class="form__group" id="group-email">
+            <label for="mail" class="form__label">Correo electrónico</label>
+            <div class="form__group-input">
+              <input type="email" name="email" id="mail" class="form__input">
+              <i class="form__icon fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="form__error__message">Por favor ingresa un correo válido</p>
+          </div>
+
+          <div class="form__group">
+            <label for="affair" class="form__label">Asunto</label>
+            <div class="form__group-input">
+              <input type="text" name="subject" id="affair" class="form__input">
+            </div>
+          </div>
+
+          <div class="form__group" id="group-message">
+            <label for="sms" class="form__label">Mensaje</label>
+            <div class="form__group-input">
+              <textarea name="message" id="sms" class="form__input form__input-message"></textarea>
+              <i class="form__icon form__icon-sms fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="form__error__message">Tu mensaje no debe superar los 200 caracteres y no debe estar vacío</p>
+          </div>
+
+          <div class="form__message">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor llene el formulario
+              correctamente
+            </p>
+          </div>
+
+          <div class="form__group form__group-btn-submit">
+            <button type="submit" class="form__btn">Enviar</button>
+          </div>
+        </form>
+      </article>
+    </article>
     <header class="header">
       <div class="logo">
         <a href="index.html#home">
@@ -53,7 +135,7 @@
         <nav class="nav">
           <a class="nav__link" href="#home">Inicio</a>
           <a class="nav__link" href="404.html">Portafolio</a>
-          <a class="nav__link" href="contact.html">Contacto</a>
+          <a class="nav__link" id="contact-link" href="#">Contacto</a>
         </nav>
       </div>
     </header>
@@ -65,7 +147,8 @@
             Soy Desarrollador Web, especializado en el área del Frontend con conocimientos sólidos de las técnologías
             básicas (HTML, CSS y JAVASCRIPT)y también de algunos de los Frameworks más populares y más utlizados.
           </p>
-          <a href="404.html"><button class="button hero__link">Descargar CV</button></a>
+          <a download="CV.md" href="README.md"><button class="button hero__link">Descargar
+              CV</button></a>
         </div>
         <div class="info__img__container">
           <img class="info__img" src="assets/img/dev-hero-ilustration.svg" alt="Man-developer-info-section" />
@@ -123,8 +206,7 @@
           <div class="card">
             <div class="card__hover__info">
               <div>
-                <p>You can see the project at the Github repository, see a preview and leave a
-                  comment</p>
+                <p>Puedes ver el código del proyecto en Github, ver una vista previa o dejar un comentario</p>
                 <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
               </div>
             </div>
@@ -143,7 +225,7 @@
                 <i class="fa-solid fa-eye"></i>
                 <p>Preview</p>
               </a>
-              <a href="contact.html" class="card_link" title="Escribir una reseña">
+              <a href="#" class="card_link comment-link" title="Escribir una reseña">
                 <i class="fa-solid fa-envelope"></i>
                 <p>Comentar</p>
               </a>
@@ -152,8 +234,7 @@
           <div class="card">
             <div class="card__hover__info">
               <div>
-                <p>You can see the project at the Github repository, see a preview and leave a
-                  comment</p>
+                <p>Puedes ver el código del proyecto en Github, ver una vista previa o dejar un comentario</p>
                 <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
               </div>
             </div>
@@ -173,7 +254,7 @@
                 <i class="fa-solid fa-eye"></i>
                 <p>Preview</p>
               </a>
-              <a href="contact.html" class="card_link" title="Escribir una reseña">
+              <a href="#" class="card_link comment-link" title="Escribir una reseña">
                 <i class="fa-solid fa-envelope"></i>
                 <p>Comentar</p>
               </a>
@@ -182,15 +263,15 @@
           <div class="card">
             <div class="card__hover__info">
               <div>
-                <p>You can see the project at the Github repository, see a preview and leave a
-                  comment</p>
+                <p>Puedes ver el código del proyecto en Github, ver una vista previa o dejar un comentario</p>
                 <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
               </div>
             </div>
             <img src="assets/img/calculator.png" alt="Project card picture" class="card__img" />
             <div class="card__paragraph">
               <h3 class="card__title">CALCULADORA CLÁSICA</h3>
-              <p class="card__description">Una calculadora clásica funcional maquetada con HTML5, CSS3 y programada con
+              <p class="card__description">Una calculadora clásica funcional maquetada con HTML5, CSS3 y programada
+                con
                 vanilla Javascript</p>
             </div>
             <div class="card__icons">
@@ -203,7 +284,7 @@
                 <i class="fa-solid fa-eye"></i>
                 <p>Preview</p>
               </a>
-              <a href="contact.html" class="card_link" title="Escribir una reseña">
+              <a href="#" class="card_link comment-link" title="Escribir una reseña">
                 <i class="fa-solid fa-envelope"></i>
                 <p>Comentar</p>
               </a>
@@ -212,8 +293,7 @@
           <div class="card">
             <div class="card__hover__info">
               <div>
-                <p>You can see the project at the Github repository, see a preview and leave a
-                  comment</p>
+                <p>Puedes ver el código del proyecto en Github, ver una vista previa o dejar un comentario</p>
                 <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
               </div>
             </div>
@@ -232,7 +312,7 @@
                 <i class="fa-solid fa-eye"></i>
                 <p>Preview</p>
               </a>
-              <a href="contact.html" class="card_link" title="Escribir una reseña">
+              <a href="#" class="card_link comment-link" title="Escribir una reseña">
                 <i class="fa-solid fa-envelope"></i>
                 <p>Comentar</p>
               </a>
@@ -241,8 +321,7 @@
           <div class="card">
             <div class="card__hover__info">
               <div>
-                <p>You can see the project at the Github repository, see a preview and leave a
-                  comment</p>
+                <p>Puedes ver el código del proyecto en Github, ver una vista previa o dejar un comentario</p>
                 <span class="card__file__icon"><i class="fa-brands fa-git-alt"></i></span>
               </div>
             </div>
@@ -261,7 +340,7 @@
                 <i class="fa-solid fa-eye"></i>
                 <p>Preview</p>
               </a>
-              <a href="contact.html" class="card_link" title="Escribir una reseña">
+              <a href="#" class="card_link comment-link" title="Escribir una reseña">
                 <i class="fa-solid fa-envelope"></i>
                 <p>Comentar</p>
               </a>
@@ -273,7 +352,8 @@
     <footer class="footer">
       <div class="footer__text">
         <h2>IvaKit</h2>
-        <p>¿Necesitas ayuda en tu aprendizaje como desarrollador o programador web? <br> Puedes contactarme en mis redes
+        <p>¿Necesitas ayuda en tu aprendizaje como desarrollador o programador web? <br> Puedes contactarme en mis
+          redes
           sociales
           y con gusto te puedo ayudar
           🤓</p>
@@ -287,7 +367,7 @@
           title="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://wa.me/529631992373" target="_blank" rel="noopener" class="footer__social__link"
+        <a href="https://wa.me/529631992376" target="_blank" rel="noopener" class="footer__social__link"
           title="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
@@ -296,9 +376,10 @@
         </a>
       </div>
     </footer>
-  </div>
-  <!-- Scripts -->
-  <script src="script/index.js" type="module"></script>
+    </article>
+    <!-- Scripts -->
+    <script src="script/index.js" type="module"></script>
+    <script src="script/form.js"></script>
 </body>
 
 </html>
